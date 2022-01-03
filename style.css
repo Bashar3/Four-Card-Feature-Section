@@ -1,0 +1,130 @@
+/* Start Global Rules */
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--Very-Light-Gray);
+}
+
+/* End Global Rules */
+.container {
+    padding: 40px 20px;
+}
+
+/* Text */
+.container .text {
+    text-align: center;
+}
+
+.container .text h1 {
+    max-width: 450px;
+    margin: auto auto 20px;
+    color: var(--Very-Dark-Blue);
+}
+
+.container .text h1 span {
+    font-weight: 200;
+}
+
+.container .text p {
+    color: var(--Grayish-Blue);
+    max-width: 550px;
+    margin: auto;
+}
+
+/* Content */
+.container .content {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    -webkit-gap: 20px;
+    -moz-gap: 20px;
+    -ms-gap: 20px;
+    -o-gap: 20px;
+}
+
+.container .content .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    -webkit-gap: 20px;
+    -moz-gap: 20px;
+    -ms-gap: 20px;
+    -o-gap: 20px;
+}
+
+@media (max-width: 991px) {
+
+    .container .content,
+    .container .content .cards-container {
+        display: block;
+    }
+
+    .container .content .card {
+        margin: 15px 0;
+    }
+}
+
+.container .content .card {
+    background-color: white;
+    box-shadow: 0 0 15px #bbb;
+    padding: 30px;
+    border-top: 4px solid;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.container .content .card h3 {
+    font-size: 20px;
+}
+
+.container .content .card p {
+    max-width: 350px;
+    color: var(--Grayish-Blue);
+    margin: 20px 0;
+}
+
+.container .content .card img {
+    display: flex;
+    margin-left: auto;
+}
+
+/* Border Top */
+.container .content>.card:first-child {
+    border-top-color: var(--Cyan);
+}
+
+.container .content>.card:last-child {
+    border-top-color: var(--Blue);
+}
+
+.container .content .cards-container .card:first-child {
+    border-top-color: var(--Red);
+}
+
+.container .content .cards-container .card:last-child {
+    border-top-color: var(--Orange);
+}
